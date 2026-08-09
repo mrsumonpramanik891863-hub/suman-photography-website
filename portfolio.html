@@ -1,166 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suman Photography | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <title>Portfolio | Suman Photography</title>
 
-body {
-  background: #080808;
-  color: #fff;
-  font-family: Arial, sans-serif;
-}
-
-header {
-  padding: 22px 7%;
-  border-bottom: 1px solid #222;
-  text-align: center;
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-
-.logo span {
-  color: #d4af37;
-}
-
-.hero {
-  padding: 80px 7% 50px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 52px;
-  margin-bottom: 15px;
-}
-
-.hero h1 span {
-  color: #d4af37;
-}
-
-.hero p {
-  color: #aaa;
-  font-size: 18px;
-}
-
-.gallery {
-  width: 90%;
-  max-width: 1200px;
-  margin: 40px auto 100px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  transition: 0.4s;
-}
-
-.gallery img:hover {
-  transform: scale(1.03);
-  opacity: 0.8;
-}
-
-.cta {
-  text-align: center;
-  padding: 70px 20px;
-  background: #111;
-}
-
-.cta h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-
-.cta span {
-  color: #d4af37;
-}
-
-.cta p {
-  color: #aaa;
-  margin-bottom: 30px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 15px 35px;
-  background: #d4af37;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer {
-  text-align: center;
-  padding: 25px;
-  color: #777;
-}
-
-@media(max-width: 700px) {
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery img {
-    height: 400px;
-  }
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="logo">SUMAN <span>PHOTOGRAPHY</span></div>
-</header>
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="nav">
 
-<section class="hero">
-  <h1>MY <span>PORTFOLIO</span></h1>
-  <p>A collection of beautiful moments captured with emotion and creativity.</p>
-</section>
+      <a href="index.html" class="logo">
+        SUMAN <span>PHOTOGRAPHY</span>
+      </a>
 
-<section class="gallery">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
 
-  <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80">
+    </nav>
+  </header>
 
-  <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=900&q=80">
 
-  <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80">
+  <!-- PAGE TITLE -->
+  <section class="page-title">
 
-  <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80">
+    <p class="small-title">
+      MY WORK
+    </p>
 
-  <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=900&q=80">
+    <h1>
+      PHOTO <span>PORTFOLIO</span>
+    </h1>
 
-  <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=80">
+    <p>
+      A collection of beautiful moments,
+      emotions and unforgettable memories.
+    </p>
 
-</section>
+  </section>
 
-<section class="cta">
-  <h2>Let's Create <span>Memories</span></h2>
-  <p>Your special moments deserve to be remembered beautifully.</p>
-  <a class="btn" href="index.html">BACK TO HOME</a>
-</section>
 
-<footer>
-  © 2026 Suman Photography. All Rights Reserved.
-</footer>
+  <!-- PORTFOLIO -->
+  <main>
+
+    <section class="portfolio">
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+          <img
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
+            alt="Wedding Photography">
+          <div class="photo-title">
+            <h3>Wedding</h3>
+            <p>Beautiful wedding moments</p>
+          </div>
+        </div>
+
+
+        <div class="portfolio-item">
+          <img
+            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=85"
+            alt="Couple Photography">
+          <div class="photo-title">
+            <h3>Couples</h3>
+            <p>Love and connection</p>
+          </div>
+        </div>
+
+
+        <div class="portfolio-item">
+          <img
+            src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=85"
+            alt="Wedding Details">
+          <div class="photo-title">
+            <h3>Details</h3>
+            <p>The little things that matter</p>
+          </div>
+        </div>
+
+
+        <div class="portfolio-item">
+          <img
+            src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=85"
+            alt="Wedding Event">
+          <div class="photo-title">
+            <h3>Celebrations</h3>
+            <p>Moments worth celebrating</p>
+          </div>
+        </div>
+
+
+        <div class="portfolio-item">
+          <img
+            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85"
+            alt="Wedding Ceremony">
+          <div class="photo-title">
+            <h3>Ceremony</h3>
+            <p>Emotional moments</p>
+          </div>
+        </div>
+
+
+        <div class="portfolio-item">
+          <img
+            src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=85"
+            alt="Wedding Venue">
+          <div class="photo-title">
+            <h3>Events</h3>
+            <p>Beautiful celebrations</p>
+          </div>
+        </div>
+
+
+        <div class="portfolio-item">
+          <img
+            src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=85"
+            alt="Event Photography">
+          <div class="photo-title">
+            <h3>Special Events</h3>
+            <p>Memories captured naturally</p>
+          </div>
+        </div>
+
+
+        <div class="portfolio-item">
+          <img
+            src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=85"
+            alt="Couple Photography">
+          <div class="photo-title">
+            <h3>Pre-Wedding</h3>
+            <p>Romantic stories</p>
+          </div>
+        </div>
+
+
+        <div class="portfolio-item">
+          <img
+            src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1000&q=85"
+            alt="Portrait Photography">
+          <div class="photo-title">
+            <h3>Portraits</h3>
+            <p>People and personalities</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+      <p class="small-title">
+        LIKE WHAT YOU SEE?
+      </p>
+
+      <h2>
+        LET'S CREATE YOUR
+        <span>STORY.</span>
+      </h2>
+
+      <p>
+        Your special moments deserve beautiful photographs.
+      </p>
+
+      <a href="contact.html" class="btn">
+        BOOK YOUR DATE
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      SUMAN <span>PHOTOGRAPHY</span>
+    </div>
+
+    <p>
+      Capturing emotions. Preserving memories.
+    </p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <p class="copyright">
+      © 2026 Suman Photography. All Rights Reserved.
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
