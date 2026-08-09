@@ -1,639 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Suman Photography | Wedding & Portrait Photographer</title>
+  <title>Suman Photography | Home</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#050505;
-  color:#fff;
-  line-height:1.6;
-}
-
-:root{
-  --gold:#d4af37;
-  --dark:#050505;
-  --light:#f5f5f5;
-  --gray:#aaa;
-}
-
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
-  background:rgba(0,0,0,.85);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(212,175,55,.25);
-}
-
-.nav{
-  max-width:1200px;
-  margin:auto;
-  padding:18px 25px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.logo{
-  font-size:22px;
-  font-weight:bold;
-  letter-spacing:2px;
-}
-
-.logo span{
-  color:var(--gold);
-}
-
-nav a{
-  color:#fff;
-  text-decoration:none;
-  margin-left:25px;
-  font-size:14px;
-  transition:.3s;
-}
-
-nav a:hover{
-  color:var(--gold);
-}
-
-/* HERO */
-
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:100px 25px 60px;
-  background:
-  linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
-  url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=85")
-  center/cover;
-}
-
-.hero-content{
-  max-width:850px;
-}
-
-.small-title{
-  color:var(--gold);
-  letter-spacing:4px;
-  font-size:13px;
-  margin-bottom:20px;
-  text-transform:uppercase;
-}
-
-.hero h1{
-  font-size:clamp(45px,9vw,90px);
-  line-height:1;
-  text-transform:uppercase;
-  margin-bottom:25px;
-}
-
-.hero h1 span{
-  color:var(--gold);
-}
-
-.hero p{
-  color:#ddd;
-  max-width:650px;
-  margin:auto;
-  font-size:18px;
-}
-
-.buttons{
-  margin-top:35px;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 28px;
-  margin:7px;
-  border:1px solid var(--gold);
-  color:var(--gold);
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
-}
-
-.btn.primary{
-  background:var(--gold);
-  color:#000;
-}
-
-.btn:hover{
-  transform:translateY(-3px);
-  background:var(--gold);
-  color:#000;
-}
-
-/* GENERAL */
-
-section{
-  padding:90px 25px;
-}
-
-.container{
-  max-width:1150px;
-  margin:auto;
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:50px;
-}
-
-.section-title .gold{
-  color:var(--gold);
-}
-
-.section-title h2{
-  font-size:40px;
-  text-transform:uppercase;
-}
-
-.section-title p{
-  color:var(--gray);
-  margin-top:10px;
-}
-
-/* PORTFOLIO */
-
-.portfolio{
-  background:#080808;
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-}
-
-.gallery img{
-  width:100%;
-  height:380px;
-  object-fit:cover;
-  display:block;
-  transition:.5s;
-}
-
-.gallery img:hover{
-  transform:scale(1.03);
-  opacity:.8;
-}
-
-/* ABOUT */
-
-.about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-}
-
-.about img{
-  width:100%;
-  max-height:600px;
-  object-fit:cover;
-}
-
-.about-text h2{
-  font-size:42px;
-  margin-bottom:20px;
-}
-
-.about-text h2 span{
-  color:var(--gold);
-}
-
-.about-text p{
-  color:#bbb;
-  margin-bottom:18px;
-}
-
-/* SERVICES */
-
-.services{
-  background:#080808;
-}
-
-.service-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.service{
-  padding:35px 25px;
-  border:1px solid #222;
-  background:#0d0d0d;
-  text-align:center;
-  transition:.3s;
-}
-
-.service:hover{
-  border-color:var(--gold);
-  transform:translateY(-5px);
-}
-
-.service .icon{
-  font-size:40px;
-  margin-bottom:15px;
-}
-
-.service h3{
-  color:var(--gold);
-  margin-bottom:10px;
-}
-
-.service p{
-  color:#999;
-}
-
-/* CTA */
-
-.cta{
-  text-align:center;
-  background:
-  linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.85)),
-  url("https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1600&q=85")
-  center/cover fixed;
-}
-
-.cta h2{
-  font-size:45px;
-  margin-bottom:15px;
-}
-
-.cta p{
-  color:#ccc;
-  margin-bottom:25px;
-}
-
-/* CONTACT */
-
-.contact{
-  text-align:center;
-}
-
-.contact-box{
-  max-width:650px;
-  margin:auto;
-  border:1px solid #222;
-  padding:35px;
-  background:#0b0b0b;
-}
-
-.contact-box p{
-  color:#aaa;
-  margin:12px;
-}
-
-.whatsapp{
-  display:inline-block;
-  margin-top:20px;
-  padding:14px 30px;
-  background:#25d366;
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-/* FOOTER */
-
-footer{
-  text-align:center;
-  padding:35px 20px;
-  border-top:1px solid #222;
-  color:#777;
-}
-
-footer span{
-  color:var(--gold);
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-  nav{
-    display:none;
-  }
-
-  .nav{
-    justify-content:center;
-  }
-
-  .hero{
-    min-height:90vh;
-  }
-
-  .hero h1{
-    font-size:52px;
-  }
-
-  .hero p{
-    font-size:16px;
-  }
-
-  section{
-    padding:70px 18px;
-  }
-
-  .gallery{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .gallery img{
-    height:250px;
-  }
-
-  .about{
-    grid-template-columns:1fr;
-  }
-
-  .about-text h2{
-    font-size:34px;
-  }
-
-  .service-grid{
-    grid-template-columns:1fr;
-  }
-
-  .cta h2{
-    font-size:34px;
-  }
-
-}
-
-@media(max-width:480px){
-
-  .gallery{
-    grid-template-columns:1fr;
-  }
-
-  .gallery img{
-    height:330px;
-  }
-
-  .hero h1{
-    font-size:45px;
-  }
-
-  .btn{
-    display:block;
-    margin:10px auto;
-    max-width:260px;
-  }
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="nav">
-    <div class="logo">
-      SUMAN <span>PHOTOGRAPHY</span>
-    </div>
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="nav">
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="logo">
+        SUMAN <span>PHOTOGRAPHY</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
     </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-
-<section id="home" class="hero">
-  <div class="hero-content">
-
-    <div class="small-title">
-      Wedding • Pre-Wedding • Portraits
-    </div>
-
-    <h1>
-      BEST <span>MOMENTS</span>
-    </h1>
-
-    <p>
-      Preserve your memories forever.
-      Beautiful stories captured with creativity,
-      emotion and passion.
-    </p>
-
-    <div class="buttons">
-      <a href="#portfolio" class="btn primary">
-        VIEW PORTFOLIO
-      </a>
-
-      <a href="#contact" class="btn">
-        BOOK YOUR DATE
-      </a>
-    </div>
-
-  </div>
-</section>
+  </header>
 
 
-<!-- PORTFOLIO -->
+  <!-- HOME HERO -->
+  <main>
 
-<section id="portfolio" class="portfolio">
+    <section class="hero">
 
-  <div class="container">
+      <div class="hero-content">
 
-    <div class="section-title">
-      <h2>Featured <span class="gold">Work</span></h2>
-      <p>A collection of moments that tell a story.</p>
-    </div>
+        <p class="subtitle">
+          WEDDING • PRE-WEDDING • PORTRAITS
+        </p>
 
-    <div class="gallery">
+        <h1>
+          BEST <span>MOMENTS</span>
+        </h1>
 
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85">
+        <p class="hero-text">
+          Preserve your memories forever.
+          Beautiful stories captured with creativity,
+          emotion and passion.
+        </p>
 
-      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85">
+        <div class="hero-buttons">
 
-      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85">
+          <a href="portfolio.html" class="btn">
+            VIEW PORTFOLIO
+          </a>
 
-      <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=85">
+          <a href="contact.html" class="btn btn-outline">
+            BOOK YOUR DATE
+          </a>
 
-      <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=85">
+        </div>
 
-      <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=900&q=85">
+      </div>
 
-    </div>
-
-  </div>
-
-</section>
+    </section>
 
 
-<!-- ABOUT -->
+    <!-- INTRO -->
+    <section class="intro">
 
-<section id="about">
-
-  <div class="container about">
-
-    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=900&q=85">
-
-    <div class="about-text">
+      <p class="small-title">
+        WELCOME TO SUMAN PHOTOGRAPHY
+      </p>
 
       <h2>
-        Behind The <span>Camera</span>
+        YOUR STORY.<br>
+        YOUR <span>MOMENTS.</span>
       </h2>
 
       <p>
-        Hello, I'm Suman, a passionate photographer
-        who believes every photograph should tell a story.
+        Photography is more than just taking pictures.
+        It's about preserving emotions, memories and
+        beautiful moments that last forever.
       </p>
 
-      <p>
-        From intimate weddings to beautiful portraits,
-        my goal is to capture genuine emotions and
-        unforgettable moments.
-      </p>
-
-      <p>
-        Every frame is carefully created with attention
-        to light, emotion and detail.
-      </p>
-
-      <a href="#contact" class="btn primary">
-        LET'S WORK TOGETHER
+      <a href="about.html" class="btn">
+        MEET THE PHOTOGRAPHER
       </a>
 
-    </div>
-
-  </div>
-
-</section>
+    </section>
 
 
-<!-- SERVICES -->
+    <!-- FEATURED PORTFOLIO -->
+    <section class="featured">
 
-<section id="services" class="services">
+      <p class="small-title">
+        FEATURED WORK
+      </p>
 
-  <div class="container">
+      <h2>
+        A GLIMPSE OF OUR <span>WORK</span>
+      </h2>
 
-    <div class="section-title">
-      <h2>My <span class="gold">Services</span></h2>
-      <p>Photography for life's most important moments.</p>
-    </div>
+      <div class="feature-grid">
 
-    <div class="service-grid">
+        <div class="feature-card">
+          <img
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
+            alt="Wedding Photography">
+          <h3>WEDDINGS</h3>
+        </div>
 
-      <div class="service">
-        <div class="icon">💍</div>
-        <h3>Wedding Photography</h3>
-        <p>
-          Emotional and timeless wedding photography
-          that captures every important moment.
-        </p>
+        <div class="feature-card">
+          <img
+            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80"
+            alt="Pre Wedding Photography">
+          <h3>PRE-WEDDING</h3>
+        </div>
+
+        <div class="feature-card">
+          <img
+            src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=80"
+            alt="Portrait Photography">
+          <h3>PORTRAITS</h3>
+        </div>
+
       </div>
 
-      <div class="service">
-        <div class="icon">❤️</div>
-        <h3>Pre-Wedding</h3>
-        <p>
-          Romantic and creative couple sessions
-          designed around your unique story.
-        </p>
+      <a href="portfolio.html" class="btn">
+        VIEW FULL PORTFOLIO
+      </a>
+
+    </section>
+
+
+    <!-- SERVICES PREVIEW -->
+    <section class="services-preview">
+
+      <p class="small-title">
+        WHAT WE DO
+      </p>
+
+      <h2>
+        OUR <span>SERVICES</span>
+      </h2>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="icon">💍</div>
+          <h3>Wedding Photography</h3>
+          <p>
+            Emotional and timeless photography
+            capturing every important moment.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">❤️</div>
+          <h3>Pre-Wedding</h3>
+          <p>
+            Romantic couple sessions created
+            around your unique story.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">📸</div>
+          <h3>Portraits & Events</h3>
+          <p>
+            Professional portraits and events
+            captured with a cinematic style.
+          </p>
+        </div>
+
       </div>
 
-      <div class="service">
-        <div class="icon">📸</div>
-        <h3>Portraits & Events</h3>
-        <p>
-          Professional portraits and event coverage
-          with a creative cinematic style.
-        </p>
-      </div>
+      <a href="services.html" class="btn">
+        VIEW SERVICES
+      </a>
 
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+
+      <h2>
+        YOUR STORY DESERVES
+        TO BE <span>REMEMBERED.</span>
+      </h2>
+
+      <p>
+        Let's create something beautiful together.
+      </p>
+
+      <a href="contact.html" class="btn">
+        BOOK YOUR DATE
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      SUMAN <span>PHOTOGRAPHY</span>
     </div>
-
-  </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-  <div class="container">
-
-    <h2>
-      Your Story Deserves To Be Remembered.
-    </h2>
 
     <p>
-      Let's create something beautiful together.
+      Capturing emotions. Preserving memories.
     </p>
 
-    <a href="#contact" class="btn primary">
-      BOOK YOUR DATE
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Let's <span class="gold">Connect</span></h2>
-      <p>Have a date in mind? Let's talk.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
     </div>
 
-    <div class="contact-box">
+    <p class="copyright">
+      © 2026 Suman Photography. All Rights Reserved.
+    </p>
 
-      <p>📍 Available for Weddings & Events</p>
+  </footer>
 
-      <p>📞 Contact me for availability and pricing</p>
-
-      <p>📧 Email: your-email@example.com</p>
-
-      <a
-        class="whatsapp"
-        href="https://wa.me/91XXXXXXXXXX"
-        target="_blank">
-        💬 CHAT ON WHATSAPP
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<footer>
-  © 2026 <span>Suman Photography</span>.
-  All Rights Reserved.
-</footer>
+  <script src="script.js"></script>
 
 </body>
 </html>
