@@ -1,157 +1,281 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Suman Photography</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | Suman Photography</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<div class="nav">
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="nav">
 
-<a href="index.html" class="logo">
-SUMAN <span>PHOTOGRAPHY</span>
-</a>
+      <a href="index.html" class="logo">
+        SUMAN <span>PHOTOGRAPHY</span>
+      </a>
 
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="contact.html">Contact</a>
+      </div>
 
-<nav id="navMenu">
-<a href="index.html">Home</a>
-<a href="portfolio.html">Portfolio</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a class="active" href="contact.html">Contact</a>
-</nav>
-
-</div>
-</header>
-
-
-<main>
-
-<section class="page-hero">
-<div>
-<p class="eyebrow">LET'S TALK</p>
-<h1>CONTACT</h1>
-<p>Your story starts with a conversation.</p>
-</div>
-</section>
+    </nav>
+  </header>
 
 
-<section>
+  <!-- PAGE TITLE -->
+  <section class="page-title">
 
-<div class="container contact-layout">
+    <p class="small-title">
+      LET'S TALK
+    </p>
 
+    <h1>
+      GET IN <span>TOUCH</span>
+    </h1>
 
-<div class="contact-info">
+    <p>
+      Your story starts with a conversation.
+    </p>
 
-<p class="eyebrow">GET IN TOUCH</p>
-
-<h2>
-Let's create something
-<span>beautiful.</span>
-</h2>
-
-<p>
-Planning a wedding, pre-wedding shoot,
-portrait session or special event?
-I'd love to hear about it.
-</p>
-
-<div class="contact-detail">
-<strong>📞 Phone</strong>
-<p>+91 XXXXXXXXXX</p>
-</div>
-
-<div class="contact-detail">
-<strong>📧 Email</strong>
-<p>your-email@example.com</p>
-</div>
-
-<div class="contact-detail">
-<strong>📍 Location</strong>
-<p>Available for Weddings & Events</p>
-</div>
-
-<a
-href="https://wa.me/91XXXXXXXXXX"
-class="whatsapp"
-target="_blank">
-💬 CHAT ON WHATSAPP
-</a>
-
-</div>
+  </section>
 
 
-<div class="booking-box">
+  <!-- CONTACT -->
+  <main>
 
-<h3>BOOK YOUR DATE</h3>
+    <section class="contact-section">
 
-<p>
-Fill in the details and get in touch with me.
-</p>
+      <div class="contact-info">
 
-<form onsubmit="sendBooking(event)">
+        <p class="small-title">
+          BOOK YOUR DATE
+        </p>
 
-<input
-type="text"
-id="name"
-placeholder="Your Name"
-required>
+        <h2>
+          LET'S CREATE SOMETHING
+          <span>BEAUTIFUL.</span>
+        </h2>
 
-<input
-type="tel"
-id="phone"
-placeholder="Phone Number"
-required>
-
-<input
-type="date"
-id="date"
-required>
-
-<select id="eventType" required>
-
-<option value="">Select Event Type</option>
-
-<option>Wedding</option>
-<option>Pre-Wedding</option>
-<option>Portrait</option>
-<option>Event</option>
-<option>Other</option>
-
-</select>
-
-<textarea
-id="message"
-rows="5"
-placeholder="Tell me about your event..."
-></textarea>
-
-<button type="submit" class="btn primary">
-SEND ENQUIRY
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
+        <p>
+          Planning a wedding, pre-wedding shoot,
+          portrait session or special event?
+          I'd love to hear about it.
+        </p>
 
 
-<footer>
-<p>© 2026 <span>Suman Photography</span>. All Rights Reserved.</p>
-</footer>
+        <div class="contact-detail">
 
-<script src="script.js"></script>
+          <h3>📞 Phone</h3>
+
+          <p>
+            +91 XXXXXXXXXX
+          </p>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+          <h3>📧 Email</h3>
+
+          <p>
+            your-email@example.com
+          </p>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+          <h3>📍 Location</h3>
+
+          <p>
+            Available for Weddings & Events
+          </p>
+
+        </div>
+
+
+        <!-- CHANGE THIS NUMBER -->
+        <a
+          href="https://wa.me/91XXXXXXXXXX"
+          class="whatsapp"
+          target="_blank">
+
+          💬 CHAT ON WHATSAPP
+
+        </a>
+
+      </div>
+
+
+      <!-- BOOKING FORM -->
+      <div class="booking-form">
+
+        <h2>
+          SEND AN <span>ENQUIRY</span>
+        </h2>
+
+        <p>
+          Tell me a little about your event.
+        </p>
+
+
+        <form
+          action="mailto:your-email@example.com"
+          method="post"
+          enctype="text/plain">
+
+          <input
+            type="text"
+            name="Name"
+            placeholder="Your Name"
+            required>
+
+
+          <input
+            type="tel"
+            name="Phone"
+            placeholder="Phone Number"
+            required>
+
+
+          <input
+            type="email"
+            name="Email"
+            placeholder="Your Email"
+            required>
+
+
+          <input
+            type="date"
+            name="Event Date">
+
+
+          <select name="Event Type">
+
+            <option value="">
+              Select Event Type
+            </option>
+
+            <option value="Wedding">
+              Wedding
+            </option>
+
+            <option value="Pre-Wedding">
+              Pre-Wedding
+            </option>
+
+            <option value="Portrait">
+              Portrait
+            </option>
+
+            <option value="Event">
+              Event
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
+
+          </select>
+
+
+          <textarea
+            name="Message"
+            rows="6"
+            placeholder="Tell me about your event...">
+          </textarea>
+
+
+          <button
+            type="submit"
+            class="btn">
+
+            SEND ENQUIRY
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="cta">
+
+      <p class="small-title">
+        HAVE A DATE IN MIND?
+      </p>
+
+      <h2>
+        LET'S MAKE IT
+        <span>MEMORABLE.</span>
+      </h2>
+
+      <p>
+        I would love to be part of your special day.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      SUMAN <span>PHOTOGRAPHY</span>
+    </div>
+
+    <p>
+      Capturing emotions. Preserving memories.
+    </p>
+
+    <div class="footer-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="portfolio.html">
+        Portfolio
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="services.html">
+        Services
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </div>
+
+    <p class="copyright">
+      © 2026 Suman Photography.
+      All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
 
 </body>
 </html>
