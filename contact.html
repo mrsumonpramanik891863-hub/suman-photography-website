@@ -331,7 +331,7 @@
       alert("OTP sent successfully.");
     } catch (error) {
       console.error(error);
-      alert("OTP could not be sent. Please try again.");
+      alert("OTP error: " + error.code + "\n" + error.message);
     }
   });
 
