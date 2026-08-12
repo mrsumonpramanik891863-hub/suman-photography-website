@@ -941,3 +941,55 @@ footer > p {
   font-size: 15px;
   min-width: 180px;
 }
+/* BOOKING FORM - MOBILE & DESKTOP FIX */
+
+.contact-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-info form input,
+.contact-info form select,
+.contact-info form button {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 52px;
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.contact-info form label {
+  display: block;
+  margin-bottom: -10px;
+  font-size: 15px;
+}
+
+.contact-info form button {
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 55px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .contact-info form {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-info form input,
+  .contact-info form select,
+  .contact-info form button {
+    width: 100%;
+    min-height: 52px;
+  }
+
+}
