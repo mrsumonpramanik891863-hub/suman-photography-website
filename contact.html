@@ -135,42 +135,72 @@
   <h2>BOOK YOUR DATE</h2>
   <p>Tell us about your special day.</p>
 
-  <form action="https://formspree.io/f/xeajglaz" method="POST">
+  <form id="bookingForm">
 
-    <input
-      type="text"
-      name="Name"
-      placeholder="Your Name"
-      required
-    >
+  <input
+    type="text"
+    name="Name"
+    placeholder="Your Name"
+    required
+  >
 
-    <select name="Wedding Type" required>
-      <option value="">Select Wedding Type</option>
-      <option value="Wedding">Wedding</option>
-      <option value="Pre-Wedding">Pre-Wedding</option>
-      <option value="Reception">Reception</option>
-      <option value="Other">Other</option>
-    </select>
+  <select name="Wedding Type" required>
+    <option value="">Select Wedding Type</option>
+    <option value="Wedding">Wedding</option>
+    <option value="Pre-Wedding">Pre-Wedding</option>
+    <option value="Reception">Reception</option>
+    <option value="Other">Other</option>
+  </select>
 
-    <input
-      type="tel"
-      name="Contact Number"
-      placeholder="Contact Number"
-      required
-    >
+  <input
+    type="tel"
+    id="phoneNumber"
+    name="Contact Number"
+    placeholder="Contact Number"
+    maxlength="10"
+    required
+  >
 
-    <input
-      type="date"
-      name="Event Date"
-      required
-    >
-<input
-  type="text"
-  name="Location"
-  placeholder="Event Location"
-  required>
-    <button type="submit">BOOK YOUR DATE</button>
+  <button type="button" id="sendOtp">
+    SEND OTP
+  </button>
 
+  <input
+    type="text"
+    id="otpCode"
+    placeholder="Enter OTP"
+    maxlength="6"
+    style="display:none;"
+  >
+
+  <button type="button" id="verifyOtp" style="display:none;">
+    VERIFY OTP
+  </button>
+
+  <input
+    type="date"
+    name="Event Date"
+    required
+  >
+
+  <input
+    type="text"
+    name="Location"
+    placeholder="Event Location"
+    required
+  >
+
+  <button
+    type="submit"
+    id="bookingButton"
+    disabled
+  >
+    BOOK YOUR DATE
+  </button>
+
+  <div id="recaptcha-container"></div>
+
+</form>
     <input type="hidden" name="_subject" value="New Photography Booking">
     <input type="hidden" name="_captcha" value="false">
 
@@ -247,6 +277,85 @@
 
 
   <script src="script.js"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import {
+    getAuth,
+    RecaptchaVerifier,
+    signInWithPhoneNumber
+  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyAwe1mx8J1eNZOD0cbmjv8V3W1PpEYGOQI",
+    authDomain: "suman-photography.firebaseapp.com",
+    projectId: "suman-photography",
+    storageBucket: "suman-photography.firebasestorage.app",
+    messagingSenderId: "376056473236",
+    appId: "1:376056473236:web:f4834d89619e9be77ab681",
+    measurementId: "G-NQ058NNY7D"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  window.recaptchaVerifier = new RecaptchaVerifier(
+    auth,
+    "recaptcha-container",
+    {
+      size: "invisible"
+    }
+  );
+
+  let confirmationResult;
+
+  document.getElementById("sendOtp").addEventListener("click", async () => {
+    const phone = document.getElementById("phoneNumber").value.trim();
+
+    if (!/^[0-9]{10}$/.test(phone)) {
+      alert("Enter a valid 10-digit mobile number.");
+      return;
+    }
+
+    try {
+      const appVerifier = window.recaptchaVerifier;
+
+      confirmationResult = await signInWithPhoneNumber(
+        auth,
+        "+91" + phone,
+        appVerifier
+      );
+
+      document.getElementById("otpCode").style.display = "block";
+      document.getElementById("verifyOtp").style.display = "block";
+
+      alert("OTP sent successfully.");
+    } catch (error) {
+      console.error(error);
+      alert("OTP could not be sent. Please try again.");
+    }
+  });
+
+  document.getElementById("verifyOtp").addEventListener("click", async () => {
+    const code = document.getElementById("otpCode").value.trim();
+
+    if (code.length !== 6) {
+      alert("Enter the 6-digit OTP.");
+      return;
+    }
+
+    try {
+      await confirmationResult.confirm(code);
+
+      document.getElementById("bookingButton").disabled = false;
+      document.getElementById("verifyOtp").disabled = true;
+      document.getElementById("phoneNumber").readOnly = true;
+
+      alert("Mobile number verified successfully.");
+    } catch (error) {
+      console.error(error);
+      alert("Incorrect OTP. Please try again.");
+    }
+  });
+</script>
 </body>
 </html>
