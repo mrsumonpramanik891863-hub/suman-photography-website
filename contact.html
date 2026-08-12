@@ -22,10 +22,22 @@
 
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a class="active" href="contact.html">Contact</a>
+
+        <a href="portfolio.html">
+          Portfolio
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a class="active" href="contact.html">
+          Contact
+        </a>
       </div>
 
     </nav>
@@ -61,174 +73,79 @@
           BOOK YOUR DATE
         </p>
 
-        <h2>
-          LET'S CREATE SOMETHING
-          <span>BEAUTIFUL.</span>
-        </h2>
 
-        <p>
-          Planning a wedding, pre-wedding shoot,
-          portrait session or special event?
-          I'd love to hear about it.
-        </p>
+        <!-- BOOKING FORM -->
+        <form action="https://formspree.io/f/xeajglaz" method="POST">
 
-<div class="contact-detail">
-
-  <h3>📞 Phone</h3>
-
-  <p>
-    <a href="tel:+917029977271">+91 7029977271</a>
-  </p>
-
-</div>
+          <input
+            type="text"
+            name="Name"
+            placeholder="Your Name"
+            required
+          >
 
 
-        <div class="contact-detail">
+          <select name="Wedding Type" required>
 
-          <h3>📧 Email</h3>
+            <option value="">
+              Select Wedding Type
+            </option>
 
-          <p>
-            your-email@example.com
-          </p>
+            <option value="Wedding">
+              Wedding
+            </option>
 
-        </div>
+            <option value="Pre-Wedding">
+              Pre-Wedding
+            </option>
+
+            <option value="Reception">
+              Reception
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
+
+          </select>
 
 
-        <div class="contact-detail">
-
-          <h3>📍 Location</h3>
-
-          <p>
-            Available for Weddings & Events
-          </p>
-
-        </div>
+          <input
+            type="tel"
+            name="Contact Number"
+            placeholder="Contact Number"
+            maxlength="10"
+            required
+          >
 
 
-        <!-- CHANGE THIS NUMBER -->
-        <a
-          href="https://wa.me/917029977271"          class="whatsapp"
-          target="_blank">
+          <label for="eventDate">
+            Event Date
+          </label>
 
-          💬 CHAT ON WHATSAPP
+          <input
+            type="date"
+            id="eventDate"
+            name="Event Date"
+            required
+          >
 
-        </a>
+
+          <input
+            type="text"
+            name="Location"
+            placeholder="Event Location"
+            required
+          >
+
+
+          <button type="submit">
+            BOOK YOUR DATE
+          </button>
+
+        </form>
 
       </div>
-
-
-      <!-- BOOKING FORM -->
-      <div class="booking-form">
-
-        <h2>
-          SEND AN <span>ENQUIRY</span>
-        </h2>
-
-        <p>
-          Tell me a little about your event.
-        </p>
-
-
-        
-          <section class="booking" id="booking">
-
-  <h2>BOOK YOUR DATE</h2>
-  <p>Tell us about your special day.</p>
-
-  <form id="bookingForm">
-
-  <input
-    type="text"
-    name="Name"
-    placeholder="Your Name"
-    required
-  >
-
-  <select name="Wedding Type" required>
-    <option value="">Select Wedding Type</option>
-    <option value="Wedding">Wedding</option>
-    <option value="Pre-Wedding">Pre-Wedding</option>
-    <option value="Reception">Reception</option>
-    <option value="Other">Other</option>
-  </select>
-
-  <input
-    type="tel"
-    id="phoneNumber"
-    name="Contact Number"
-    placeholder="Contact Number"
-    maxlength="10"
-    required
-  >
-
-  <button type="button" id="sendOtp">
-    SEND OTP
-  </button>
-
-  <input
-    type="text"
-    id="otpCode"
-    placeholder="Enter OTP"
-    maxlength="6"
-    style="display:none;"
-  >
-
-  <button type="button" id="verifyOtp" style="display:none;">
-    VERIFY OTP
-  </button>
-
-  <input
-    type="date"
-    name="Event Date"
-    required
-  >
-
-  <input
-    type="text"
-    name="Location"
-    placeholder="Event Location"
-    required
-  >
-
-  <button
-    type="submit"
-    id="bookingButton"
-    disabled
-  >
-    BOOK YOUR DATE
-  </button>
-
-  <div id="recaptcha-container"></div>
-
-</form>
-    <input type="hidden" name="_subject" value="New Photography Booking">
-    <input type="hidden" name="_captcha" value="false">
-
-  </form>
-
-        </section>
-
-          
-      </div>
-
-    </section>
-
-
-    <!-- FINAL CTA -->
-    <section class="cta">
-
-      <p class="small-title">
-        HAVE A DATE IN MIND?
-      </p>
-
-      <h2>
-        LET'S MAKE IT
-        <span>MEMORABLE.</span>
-      </h2>
-
-      <p>
-        I would love to be part of your special day.
-      </p>
 
     </section>
 
@@ -238,17 +155,11 @@
   <!-- FOOTER -->
   <footer>
 
-    <div class="footer-logo">
-      SUMAN <span>PHOTOGRAPHY</span>
-    </div>
-
-    <p>
-      Capturing emotions. Preserving memories.
-    </p>
-
     <div class="footer-links">
 
-      <a href="index.html">Home</a>
+      <a href="index.html">
+        Home
+      </a>
 
       <a href="portfolio.html">
         Portfolio
@@ -268,6 +179,7 @@
 
     </div>
 
+
     <p class="copyright">
       © 2026 Suman Photography.
       All Rights Reserved.
@@ -277,85 +189,8 @@
 
 
   <script src="script.js"></script>
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-  import {
-    getAuth,
-    RecaptchaVerifier,
-    signInWithPhoneNumber
-  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyAwe1mx8J1eNZOD0cbmjv8V3W1PpEYGOQI",
-    authDomain: "suman-photography.firebaseapp.com",
-    projectId: "suman-photography",
-    storageBucket: "suman-photography.firebasestorage.app",
-    messagingSenderId: "376056473236",
-    appId: "1:376056473236:web:f4834d89619e9be77ab681",
-    measurementId: "G-NQ058NNY7D"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-
-  window.recaptchaVerifier = new RecaptchaVerifier(
-    auth,
-    "recaptcha-container",
-    {
-      size: "invisible"
-    }
-  );
-
-  let confirmationResult;
-
-  document.getElementById("sendOtp").addEventListener("click", async () => {
-    const phone = document.getElementById("phoneNumber").value.trim();
-
-    if (!/^[0-9]{10}$/.test(phone)) {
-      alert("Enter a valid 10-digit mobile number.");
-      return;
-    }
-
-    try {
-      const appVerifier = window.recaptchaVerifier;
-
-      confirmationResult = await signInWithPhoneNumber(
-        auth,
-        "+91" + phone,
-        appVerifier
-      );
-
-      document.getElementById("otpCode").style.display = "block";
-      document.getElementById("verifyOtp").style.display = "block";
-
-      alert("OTP sent successfully.");
-    } catch (error) {
-      console.error(error);
-      alert("OTP error: " + error.code + "\n" + error.message);
-    }
-  });
-
-  document.getElementById("verifyOtp").addEventListener("click", async () => {
-    const code = document.getElementById("otpCode").value.trim();
-
-    if (code.length !== 6) {
-      alert("Enter the 6-digit OTP.");
-      return;
-    }
-
-    try {
-      await confirmationResult.confirm(code);
-
-      document.getElementById("bookingButton").disabled = false;
-      document.getElementById("verifyOtp").disabled = true;
-      document.getElementById("phoneNumber").readOnly = true;
-
-      alert("Mobile number verified successfully.");
-    } catch (error) {
-      console.error(error);
-      alert("Incorrect OTP. Please try again.");
-    }
-  });
-</script>
 </body>
+
 </html>
+  
