@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -22,22 +22,10 @@
 
       <div class="nav-links">
         <a href="index.html">Home</a>
-
-        <a href="portfolio.html">
-          Portfolio
-        </a>
-
-        <a href="about.html">
-          About
-        </a>
-
-        <a href="services.html">
-          Services
-        </a>
-
-        <a class="active" href="contact.html">
-          Contact
-        </a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="contact.html">Contact</a>
       </div>
 
     </nav>
@@ -62,7 +50,7 @@
   </section>
 
 
-  <!-- CONTACT -->
+  <!-- CONTACT SECTION -->
   <main>
 
     <section class="contact-section">
@@ -73,10 +61,13 @@
           BOOK YOUR DATE
         </p>
 
-
         <!-- BOOKING FORM -->
-        <form action="https://formspree.io/f/xeajglaz" method="POST">
+        <form
+          action="https://formspree.io/f/xeajglaz"
+          method="POST"
+        >
 
+          <!-- NAME -->
           <input
             type="text"
             name="Name"
@@ -85,9 +76,12 @@
           >
 
 
-          <select name="Wedding Type" required>
-
-            <option value="">
+          <!-- WEDDING TYPE -->
+          <select
+            name="Wedding Type"
+            required
+          >
+            <option value="" disabled selected>
               Select Wedding Type
             </option>
 
@@ -106,31 +100,29 @@
             <option value="Other">
               Other
             </option>
-
           </select>
 
 
+          <!-- CONTACT NUMBER -->
           <input
             type="tel"
             name="Contact Number"
             placeholder="Contact Number"
             maxlength="10"
+            inputmode="numeric"
             required
           >
 
 
-          <label for="eventDate">
-            Event Date
-          </label>
-
+          <!-- EVENT DATE -->
           <input
             type="date"
-            id="eventDate"
             name="Event Date"
             required
           >
 
 
+          <!-- LOCATION -->
           <input
             type="text"
             name="Location"
@@ -139,6 +131,7 @@
           >
 
 
+          <!-- SUBMIT -->
           <button type="submit">
             BOOK YOUR DATE
           </button>
@@ -157,28 +150,13 @@
 
     <div class="footer-links">
 
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="portfolio.html">
-        Portfolio
-      </a>
-
-      <a href="about.html">
-        About
-      </a>
-
-      <a href="services.html">
-        Services
-      </a>
-
-      <a href="contact.html">
-        Contact
-      </a>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
 
     </div>
-
 
     <p class="copyright">
       © 2026 Suman Photography.
@@ -188,9 +166,10 @@
   </footer>
 
 
+  <!-- MAIN JAVASCRIPT -->
   <script src="script.js"></script>
 
 </body>
 
-</html>
-  
+</html>  
+      
